@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+  <div class="row" style="margin: 5%">
+    <%= form_for @user, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+    <%= f.text_field :username, placeholder: "Username" %>
+    <%= f.email_field :email, placeholder: "Email" %>
+    <%= f.phone_field :phone, placeholder: "Phone" %>
+    <%= f.text_field :location, placeholder: "Location" %>
+    <%= f.check_box :photographer %>
+    <%= f.submit "Create" %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
